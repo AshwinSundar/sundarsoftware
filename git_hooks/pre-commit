@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Run linter
+which flake8
+if [ $? -ne 0 ]; then
+    echo "---FLAKE8 LINTER MISSING---"
+    echo "Get flake8 here -> https://flake8.pycqa.org/en/latest/"
+    exit 1
+fi
+
+make lint
+if [ $? -ne 0 ]; then
+    echo "---UNABLE TO COMMIT: Lint issues found by flake 8---"
+    echo "Rerun linter with 'make lint'"
+    echo "Fix lint issues before committing"
+    exit 1
+fi
+
+# Regenerate requirements file
+uv pip compile pyproject.toml -o requirements.txt
+git add requirements.txt
+
+# Add any files that were modified back to the staging area
+staged_files=$(git diff --cached --name-only)
+for file in $staged_files; do
+    # Check if the file has a .py extension
+    if [[ "$file" == *.py ]]; then
+        echo "Formatting $file with Black"
+        black --line-length 120 "$file"
+
+        if [ -f "$file" ]; then
+            git add "$file"
+        fi
+    fi
+done
+
+exit 0
+
