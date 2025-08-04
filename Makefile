@@ -9,8 +9,7 @@ configure:
 
 tw:
 	touch "tailwind.config.js"
-	./tailwindcss -i ./static/css/styles.css -o ./static/css/styles.out.css
-	make collstat
+	./tailwindcss -i ./static/css/styles.tw.css -o ./static/css/styles.out.css
 
 lint:
 	flake8 --config=.flake8 .

@@ -1,8 +1,75 @@
 <html>
     <head>
         <title>Sundar Software Consulting</title>
+        <link href="{{ url_for('static', path='/css/styles.out.css') }}" rel="stylesheet">
     </head>
-    <body>
-        <h1>Sundar Software Consulting</h1>
+    <body class="max-w-4xl mx-auto font-mono text-blue-900 space-y-4">
+        <header class="p-2 bg-blue-100 w-full sticky">
+            <div class="w-full flex flex-row justify-between items-center">
+                <a href="{{ url_for('main') }}" class="text-center text-sm sm:text-lg md:text-2xl whitespace-nowrap">
+                Sundar Software Consulting
+                </a>
+                <div class="text-sm flex flex-col">
+                    <a href="tel:14802160436">📞 (480) 216-0436</a>
+                    <span class="whitespace-nowrap">📧 ashwin@sundarsoftware.com</span>
+                </div>
+            </div>
+        </header>
+        <main class="grid grid-cols-2 gap-2 px-2 sm:px-4 [&>*]:border-black [&>*]:border-2 [&>*]:p-2">
+            <div class="flex flex-col">
+                <h2>⭐ <b><u>Hire me for</u></b><h2>
+                <ul class="list-disc list-outside pl-4">
+                    <li>🐍 Python-based Full Stack Development</li>
+                    <li>🌲 Greenfield Projects</li>
+                    <li>🔧 Code Maintenance</li>
+                    <li>➗ Major Refactors</li>
+                    <li>🪲 Bug Bashing</li>
+                    <li>⏱️ Anything that you can't get to in the next sprint/epic/year</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2><b><u>My preferred tech</u></b><h2>
+                <ul class="list-disc list-outside pl-4">
+                    <li>Python</li>
+                    <li>FastAPI</li>
+                    <li>Django</li>
+                    <li>HTMX</li>
+                    <li>Datastar</li>
+                    <li>Alpine.js</li>
+                    <li>Tailwind CSS</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2><b><u>I will</u></b><h2>
+                <ul class="list-disc list-outside pl-4">
+                    <li>Use evergreen technologies</li>
+                    <li>Treat software development like a marathon</li>
+                    <li>Always believe there is a market for quality</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2><b><u>I will NOT</u></b><h2>
+                <ul class="list-disc list-outside pl-4">
+                    <li>Chase the fad-of-the-week</li>
+                    <li>Work in sprints</li>
+                    <li>Participate in corporate politics</li>
+                </ul>
+            </div>
+
+        </main>
+        <footer class="p-2 bg-blue-50 w-full sticky top-[100vh]">
+            <div class="w-full flex flex-row justify-between items-center">
+                <a href="{{ url_for('main') }}" class="text-center text-sm sm:text-lg md:text-2xl whitespace-nowrap">
+                    Sundar Software Consulting
+                </a>
+                <div class="text-sm flex flex-col">
+                    <span><b>Rate:</b> $125/hour</span>
+                    <span><b>Minimum engagement:</b> 2 weeks</span>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
