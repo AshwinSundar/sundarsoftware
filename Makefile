@@ -1,11 +1,11 @@
 run:
 	make configure
-	. .venv/bin/activate && uv sync
-	fastapi dev main.py
+	. .venv/bin/activate && uv sync && fastapi dev main.py
 
 configure:
 	ln -f git_hooks/* .git/hooks/
 	[ -f ".venv/" ] || uv venv
+	make tw
 
 tw:
 	touch "tailwind.config.js"

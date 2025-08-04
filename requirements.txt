@@ -7,8 +7,6 @@ anyio==4.9.0
     #   httpx
     #   starlette
     #   watchfiles
-black==25.1.0
-    # via sundarsoftware (pyproject.toml)
 certifi==2025.8.3
     # via
     #   httpcore
@@ -16,7 +14,6 @@ certifi==2025.8.3
     #   sentry-sdk
 click==8.2.1
     # via
-    #   black
     #   rich-toolkit
     #   typer
     #   uvicorn
@@ -32,8 +29,6 @@ fastapi-cli==0.0.8
     # via fastapi
 fastapi-cloud-cli==0.1.5
     # via fastapi-cli
-flake8==7.3.0
-    # via sundarsoftware (pyproject.toml)
 h11==0.16.0
     # via
     #   httpcore
@@ -59,28 +54,14 @@ markdown-it-py==3.0.0
     # via rich
 markupsafe==3.0.2
     # via jinja2
-mccabe==0.7.0
-    # via flake8
 mdurl==0.1.2
     # via markdown-it-py
-mypy-extensions==1.1.0
-    # via black
-packaging==25.0
-    # via black
-pathspec==0.12.1
-    # via black
-platformdirs==4.3.8
-    # via black
-pycodestyle==2.14.0
-    # via flake8
 pydantic==2.11.7
     # via
     #   fastapi
     #   fastapi-cloud-cli
 pydantic-core==2.33.2
     # via pydantic
-pyflakes==3.4.0
-    # via flake8
 pygments==2.19.2
     # via rich
 python-dotenv==1.1.1
