@@ -1,28 +1,21 @@
 <html>
     <head>
         <title>Sundar Software Consulting</title>
-        <meta name="description" content="Independent software consulting by Ashwin Sundar. Python-based development, FastAPI, Django, HTMX, Datastar, Alpine.js, Tailwind CSS. Greenfield projects, staff augmentation, and more.">
+        <meta name="description" content="Independent software consulting by Ashwin Sundar. Python-based development, FastAPI, Django, HTMX, Datastar, Alpine.js, Tailwind CSS. Greenfield projects, staff augmentation.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <link href="{{ url_for('static', path='/css/styles.out.css') }}" rel="stylesheet">
     </head>
     <body class="max-w-4xl mx-auto font-mono text-blue-900 space-y-4">
         <header class="p-2 bg-blue-100 w-full sticky">
-            <div class="w-full flex flex-row justify-between items-center">
-                <a href="{{ url_for('main') }}" class="text-center text-sm sm:text-lg md:text-2xl whitespace-nowrap">
-                Sundar Software Consulting
-                </a>
-                <div class="text-sm flex flex-col">
-                    <a href="tel:14802160436">📞 (480) 216-0436</a>
-                    <span class="whitespace-nowrap">📧 ashwin@sundarsoftware.com</span>
-                </div>
-            </div>
+            {% include "header_footer.html" %}
         </header>
         <main class="grid grid-cols-2 gap-2 px-2 sm:px-4 [&>*]:border-black [&>*]:border-2 [&>*]:p-2">
             <div>
                 <h2>⭐ <b><u>Hire me for</u></b><h2>
                 <ul class="list-disc list-outside pl-4">
-                    <li>🐍 Python-based Full Stack Development</li>
+                    <li>🌐 Full Stack Web Development</li>
+                    <li> Web Design</li>
+                    <li>Scientific Programming in Python</li>
                     <li>🌲 Greenfield Projects</li>
                     <li>💪 Staff Augmentation</li>
                     <li>🔧 Code Maintenance</li>
@@ -31,7 +24,6 @@
                     <li>⏱️ Anything that you can't get to in the next sprint/epic/year</li>
                 </ul>
             </div>
-
             <div>
                 <h2><b><u>My preferred software stack</u></b><h2>
                 <ul class="list-disc list-outside pl-4">
@@ -42,47 +34,23 @@
                     <li>Tailwind CSS</li>
                 </ul>
             </div>
-
-            <div>
-                <h2><b><u>I will</u></b><h2>
-                <ul class="list-disc list-outside pl-4">
-                    <li>Use evergreen technologies</li>
-                    <li>Treat software development like a marathon, not a "sprint"</li>
-                    <li>Always believe there is a market for quality</li>
-                </ul>
-            </div>
-
-            <div>
-                <h2><b><u>I will NOT</u></b><h2>
-                <ul class="list-disc list-outside pl-4">
-                    <li>Chase the fad-of-the-week</li>
-                    <li>Work in sprints</li>
-                    <li>Participate in corporate politics</li>
-                </ul>
-            </div>
             <div class="col-span-2">
-                <h2><b><u>My core (software) beliefs</u></b><h2>
-                <ul class="list-disc list-outside pl-4">
-                    <li>Slow is smooth, smooth is fast</li>
-                    <li>
-                        <a href="https://en.wikipedia.org/wiki/Monozukuri" target="_blank">Monozukuri (ものづくり)</a> - Take pride in the things you make
-                    </li>
-                    <li>
-                        <a href="https://en.wikipedia.org/wiki/Kaizen" target="_blank">Kaizen (改善)</a> - Get a little better at what you do, every day
-                    </li>
-                </ul>
+                <h2><b><u>Portfolio</u></b><h2>
+                <div class="grid grid-cols-1 md:grid-cols-3">
+                    <div>
+                        <h3>mousehouse.bio</h3>
+                    </div>
+                    <div>
+                        <h3>ashwinsundar.com</h3>
+                    </div>
+                    <div>
+                        <h3>raisingcanes.com</h3>
+                    </div>
+                </div>
             <div>
         </main>
         <footer class="p-2 bg-blue-50 w-full sticky top-[100vh]">
-            <div class="w-full flex flex-row justify-between items-center">
-                <a href="{{ url_for('main') }}" class="text-center text-sm sm:text-lg md:text-2xl whitespace-nowrap">
-                    Sundar Software Consulting
-                </a>
-                <div class="text-sm flex flex-col">
-                    <span><b>Rate:</b> $125/hour</span>
-                    <span><b>Minimum engagement:</b> 2 weeks</span>
-                </div>
-            </div>
+            {% include "header_footer.html" %}
         </footer>
     </body>
 </html>
